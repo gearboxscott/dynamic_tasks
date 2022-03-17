@@ -1,0 +1,5 @@
+---
+
+- name: print dynamic two
+  debug:
+    msg: "perform tasks for dynamic two"

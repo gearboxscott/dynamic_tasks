@@ -1,0 +1,16 @@
+---
+# site.yml for dynamic_tasks
+
+- name: Project dynamic_tasks
+  hosts: localhost
+  gather_facts: no
+
+  tasks:
+  - name: role_dynamictasks
+    include_role:
+      name: role_dynamictasks
+      apply:
+        tags:
+          - dynomite
+    tags:
+      - always

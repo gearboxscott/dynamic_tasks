@@ -1,0 +1,5 @@
+---
+
+- name: print dynamic one
+  debug:
+    msg: "perform tasks for dynamic one"

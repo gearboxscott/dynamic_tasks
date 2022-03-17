@@ -1,0 +1,14 @@
+---
+# tasks file for role_dynamictasks
+
+- name: look for tasks files
+  find:
+    paths: ./files
+    patterns: 'dynamic*.yml'
+  register: find_matches
+
+- name: Include task list in play only if the condition is true
+  include_tasks: 
+    file: "{{ item.path }}"
+  loop: '{{ find_matches.files }}'
+  when: find_matches is defined
