@@ -1,0 +1,146 @@
+ansible-playbook [core 2.12.1]
+  config file = /root/code/projects/dynamic_tasks/ansible.cfg
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.8/site-packages/ansible
+  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.8.8 (default, Aug 11 2021, 06:52:42) [GCC 8.5.0 20210514 (Red Hat 8.5.0-3)]
+  jinja version = 2.10.3
+  libyaml = True
+Using /root/code/projects/dynamic_tasks/ansible.cfg as config file
+Skipping callback 'anstomlog', as we already have a stdout callback.
+Skipping callback 'default', as we already have a stdout callback.
+Skipping callback 'minimal', as we already have a stdout callback.
+Skipping callback 'oneline', as we already have a stdout callback.
+1 plays in site.yml
+META: ran handlers
+[12:11:31] system ... | [12:11:31]: /root/code/projects/dynamic_tasks/site.yml:9
+[12:11:31] role_dynamictasks ...     
+[12:11:31]   ↳ role_dynamictasks : look for tasks files ... | localhost | SUCCESS | 281ms
+{
+  - msg: All paths examined
+  - files: [ 
+    - {
+    - path: files/dynamic1.yml
+    - mode: 0644
+    - isdir: False
+    - ischr: False
+    - isblk: False
+    - isreg: True
+    - isfifo: False
+    - islnk: False
+    - issock: False
+    - uid: 0
+    - gid: 0
+    - size: 80
+    - inode: 1830518
+    - dev: 64768
+    - nlink: 1
+    - atime: 1647539805.5732577
+    - mtime: 1647539411.7232854
+    - ctime: 1647539784.5392592
+    - gr_name: root
+    - pw_name: root
+    - wusr: True
+    - rusr: True
+    - xusr: False
+    - wgrp: False
+    - rgrp: True
+    - xgrp: False
+    - woth: False
+    - roth: True
+    - xoth: False
+    - isuid: False
+    - isgid: False
+  }
+    - {
+    - path: files/dynamic2.yml
+    - mode: 0644
+    - isdir: False
+    - ischr: False
+    - isblk: False
+    - isreg: True
+    - isfifo: False
+    - islnk: False
+    - issock: False
+    - uid: 0
+    - gid: 0
+    - size: 80
+    - inode: 1830519
+    - dev: 64768
+    - nlink: 1
+    - atime: 1647539805.5762577
+    - mtime: 1647539449.0022829
+    - ctime: 1647539784.5392592
+    - gr_name: root
+    - pw_name: root
+    - wusr: True
+    - rusr: True
+    - xusr: False
+    - wgrp: False
+    - rgrp: True
+    - xgrp: False
+    - woth: False
+    - roth: True
+    - xoth: False
+    - isuid: False
+    - isgid: False
+  }
+    - {
+    - path: files/dynamic3.yml
+    - mode: 0644
+    - isdir: False
+    - ischr: False
+    - isblk: False
+    - isreg: True
+    - isfifo: False
+    - islnk: False
+    - issock: False
+    - uid: 0
+    - gid: 0
+    - size: 84
+    - inode: 1830520
+    - dev: 64768
+    - nlink: 1
+    - atime: 1647539805.5772576
+    - mtime: 1647539464.0402818
+    - ctime: 1647539784.5392592
+    - gr_name: root
+    - pw_name: root
+    - wusr: True
+    - rusr: True
+    - xusr: False
+    - wgrp: False
+    - rgrp: True
+    - xgrp: False
+    - woth: False
+    - roth: True
+    - xoth: False
+    - isuid: False
+    - isgid: False
+  }
+   ]
+  - changed: False
+  - matched: 3
+  - examined: 3
+  - skipped_paths: {
+  }
+}
+[12:11:31]   ↳ role_dynamictasks : Include task list in play only if the condition is true ... | localhost | INCLUDED | dynamic1.yml
+[12:11:31]   ↳ dynamic1 : print dynamic one ... | localhost | SUCCESS | 11ms
+{
+  - msg: perform tasks for dynamic one
+}
+[12:11:31]   ↳ dynamic2 : print dynamic two ... | localhost | SUCCESS | 10ms
+{
+  - msg: perform tasks for dynamic two
+}
+[12:11:31]   ↳ dynamic3 : print dynamic three ... | localhost | SUCCESS | 10ms
+{
+  - msg: perform tasks for dynamic three
+}
+META: role_complete for localhost
+META: ran handlers
+META: ran handlers
+[12:11:31] system ... | -- Play recap --
+localhost                  : ok=7    changed=0    unreachable=0    failed=0   
