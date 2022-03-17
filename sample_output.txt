@@ -1,0 +1,199 @@
+ansible-playbook [core 2.12.1]
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python3.8/site-packages/ansible
+  ansible collection location = /root/.ansible/collections:/usr/share/ansible/collections
+  executable location = /usr/bin/ansible-playbook
+  python version = 3.8.8 (default, Aug 11 2021, 06:52:42) [GCC 8.5.0 20210514 (Red Hat 8.5.0-3)]
+  jinja version = 2.10.3
+  libyaml = True
+Using /etc/ansible/ansible.cfg as config file
+host_list declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+script declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+auto declined parsing /etc/ansible/hosts as it did not pass its verify_file() method
+Parsed /etc/ansible/hosts inventory source with ini plugin
+Skipping callback 'default', as we already have a stdout callback.
+Skipping callback 'minimal', as we already have a stdout callback.
+Skipping callback 'oneline', as we already have a stdout callback.
+
+PLAYBOOK: site.yml *************************************************************
+1 plays in site.yml
+
+PLAY [Project dynamic_tasks] ***************************************************
+META: ran handlers
+
+TASK [role_dynamictasks] *******************************************************
+task path: /root/code/projects/dynamic_tasks/site.yml:9
+
+TASK [role_dynamictasks : look for tasks files] ********************************
+task path: /root/code/projects/dynamic_tasks/roles/role_dynamictasks/tasks/main.yml:4
+<127.0.0.1> ESTABLISH LOCAL CONNECTION FOR USER: root
+<127.0.0.1> EXEC /bin/sh -c 'echo ~root && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '( umask 77 && mkdir -p "` echo /root/.ansible/tmp `"&& mkdir "` echo /root/.ansible/tmp/ansible-tmp-1647539907.4700933-48282-166125136679644 `" && echo ansible-tmp-1647539907.4700933-48282-166125136679644="` echo /root/.ansible/tmp/ansible-tmp-1647539907.4700933-48282-166125136679644 `" ) && sleep 0'
+Using module file /usr/lib/python3.8/site-packages/ansible/modules/find.py
+<127.0.0.1> PUT /root/.ansible/tmp/ansible-local-482759psdy42w/tmp13o63bji TO /root/.ansible/tmp/ansible-tmp-1647539907.4700933-48282-166125136679644/AnsiballZ_find.py
+<127.0.0.1> EXEC /bin/sh -c 'chmod u+x /root/.ansible/tmp/ansible-tmp-1647539907.4700933-48282-166125136679644/ /root/.ansible/tmp/ansible-tmp-1647539907.4700933-48282-166125136679644/AnsiballZ_find.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c '/usr/bin/python3.8 /root/.ansible/tmp/ansible-tmp-1647539907.4700933-48282-166125136679644/AnsiballZ_find.py && sleep 0'
+<127.0.0.1> EXEC /bin/sh -c 'rm -f -r /root/.ansible/tmp/ansible-tmp-1647539907.4700933-48282-166125136679644/ > /dev/null 2>&1 && sleep 0'
+ok: [localhost] => {
+    "changed": false,
+    "examined": 3,
+    "files": [
+        {
+            "atime": 1647539805.5732577,
+            "ctime": 1647539784.5392592,
+            "dev": 64768,
+            "gid": 0,
+            "gr_name": "root",
+            "inode": 1830518,
+            "isblk": false,
+            "ischr": false,
+            "isdir": false,
+            "isfifo": false,
+            "isgid": false,
+            "islnk": false,
+            "isreg": true,
+            "issock": false,
+            "isuid": false,
+            "mode": "0644",
+            "mtime": 1647539411.7232854,
+            "nlink": 1,
+            "path": "files/dynamic1.yml",
+            "pw_name": "root",
+            "rgrp": true,
+            "roth": true,
+            "rusr": true,
+            "size": 80,
+            "uid": 0,
+            "wgrp": false,
+            "woth": false,
+            "wusr": true,
+            "xgrp": false,
+            "xoth": false,
+            "xusr": false
+        },
+        {
+            "atime": 1647539805.5762577,
+            "ctime": 1647539784.5392592,
+            "dev": 64768,
+            "gid": 0,
+            "gr_name": "root",
+            "inode": 1830519,
+            "isblk": false,
+            "ischr": false,
+            "isdir": false,
+            "isfifo": false,
+            "isgid": false,
+            "islnk": false,
+            "isreg": true,
+            "issock": false,
+            "isuid": false,
+            "mode": "0644",
+            "mtime": 1647539449.0022829,
+            "nlink": 1,
+            "path": "files/dynamic2.yml",
+            "pw_name": "root",
+            "rgrp": true,
+            "roth": true,
+            "rusr": true,
+            "size": 80,
+            "uid": 0,
+            "wgrp": false,
+            "woth": false,
+            "wusr": true,
+            "xgrp": false,
+            "xoth": false,
+            "xusr": false
+        },
+        {
+            "atime": 1647539805.5772576,
+            "ctime": 1647539784.5392592,
+            "dev": 64768,
+            "gid": 0,
+            "gr_name": "root",
+            "inode": 1830520,
+            "isblk": false,
+            "ischr": false,
+            "isdir": false,
+            "isfifo": false,
+            "isgid": false,
+            "islnk": false,
+            "isreg": true,
+            "issock": false,
+            "isuid": false,
+            "mode": "0644",
+            "mtime": 1647539464.0402818,
+            "nlink": 1,
+            "path": "files/dynamic3.yml",
+            "pw_name": "root",
+            "rgrp": true,
+            "roth": true,
+            "rusr": true,
+            "size": 84,
+            "uid": 0,
+            "wgrp": false,
+            "woth": false,
+            "wusr": true,
+            "xgrp": false,
+            "xoth": false,
+            "xusr": false
+        }
+    ],
+    "invocation": {
+        "module_args": {
+            "age": null,
+            "age_stamp": "mtime",
+            "contains": null,
+            "depth": null,
+            "excludes": null,
+            "file_type": "file",
+            "follow": false,
+            "get_checksum": false,
+            "hidden": false,
+            "paths": [
+                "./files"
+            ],
+            "patterns": [
+                "dynamic*.yml"
+            ],
+            "read_whole_file": false,
+            "recurse": false,
+            "size": null,
+            "use_regex": false
+        }
+    },
+    "matched": 3,
+    "msg": "All paths examined",
+    "skipped_paths": {}
+}
+
+TASK [role_dynamictasks : Include task list in play only if the condition is true] ***
+task path: /root/code/projects/dynamic_tasks/roles/role_dynamictasks/tasks/main.yml:10
+included: /root/code/projects/dynamic_tasks/files/dynamic1.yml for localhost => (item={'path': 'files/dynamic1.yml', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 80, 'inode': 1830518, 'dev': 64768, 'nlink': 1, 'atime': 1647539805.5732577, 'mtime': 1647539411.7232854, 'ctime': 1647539784.5392592, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False})
+included: /root/code/projects/dynamic_tasks/files/dynamic2.yml for localhost => (item={'path': 'files/dynamic2.yml', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 80, 'inode': 1830519, 'dev': 64768, 'nlink': 1, 'atime': 1647539805.5762577, 'mtime': 1647539449.0022829, 'ctime': 1647539784.5392592, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False})
+included: /root/code/projects/dynamic_tasks/files/dynamic3.yml for localhost => (item={'path': 'files/dynamic3.yml', 'mode': '0644', 'isdir': False, 'ischr': False, 'isblk': False, 'isreg': True, 'isfifo': False, 'islnk': False, 'issock': False, 'uid': 0, 'gid': 0, 'size': 84, 'inode': 1830520, 'dev': 64768, 'nlink': 1, 'atime': 1647539805.5772576, 'mtime': 1647539464.0402818, 'ctime': 1647539784.5392592, 'gr_name': 'root', 'pw_name': 'root', 'wusr': True, 'rusr': True, 'xusr': False, 'wgrp': False, 'rgrp': True, 'xgrp': False, 'woth': False, 'roth': True, 'xoth': False, 'isuid': False, 'isgid': False})
+
+TASK [role_dynamictasks : print dynamic one] ***********************************
+task path: /root/code/projects/dynamic_tasks/files/dynamic1.yml:3
+ok: [localhost] => {
+    "msg": "perform tasks for dynamic one"
+}
+
+TASK [role_dynamictasks : print dynamic two] ***********************************
+task path: /root/code/projects/dynamic_tasks/files/dynamic2.yml:3
+ok: [localhost] => {
+    "msg": "perform tasks for dynamic two"
+}
+
+TASK [role_dynamictasks : print dynamic three] *********************************
+task path: /root/code/projects/dynamic_tasks/files/dynamic3.yml:3
+ok: [localhost] => {
+    "msg": "perform tasks for dynamic three"
+}
+META: role_complete for localhost
+META: ran handlers
+META: ran handlers
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
